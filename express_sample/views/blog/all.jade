@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+    h1= title
+    a(href="/blog/new")!= "Create New"
+    .container
+    #articles
+  
+        each article in articles
+            div.row 
+                div.col-sm-4= article.created_at
+                div.col-sm-4 
+                    a(href="/blog/"+article._id)!= article.title
+                div.col-sm-4= article.body
+

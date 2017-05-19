@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+    h1= title
+    form( method="post")
+        div.container
+            div.row
+                span.col-lg-6 Title :
+                input.col-lg-6(type="text", name="title", id="title",value =article.title)
+            div.row
+                span.col-lg-6  Body :
+                input.col-lg-6( name="body", type="text"  id="body",value =article.body)
+            div.row
+                span.col-lg-6  ID :
+                input.col-lg-6( name="_id", type="text"  id="_id",value =article._id)
+            div#editArticleSubmit.row
+               button.btn.btn-success Add

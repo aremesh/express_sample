@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+    h1= title
+    form.form-horizontal(action='', method='POST')
+      fieldset
+        #legend
+          legend Register
+        .control-group
+          // title
+          label.control-label(for='title') Title
+          .controls
+            input#title.input-xlarge(type='text', name='title', placeholder='')
+            p.help-block Title can contain any letters or numbers, without spaces
+        .control-group
+          // Body
+          label.control-label(for='LastName') Content
+          .controls
+            textarea#LastName.input-xlarge(type='text', name='body', placeholder='')
+            p.help-block Please provide your Content
+       
+        .control-group
+          // Button
+          .controls
+            button.btn.btn-success Add
